@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wdfsdfsf_y5$aq88!1zr(#i2x^jk#6eou1ygnxn!41+1#ffh20
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #apps
+    'corsheaders',
     'rest_framework',
     'apps.clientes',
     'apps.config_sys',
@@ -55,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #cors
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'hostal.urls'
@@ -138,3 +141,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'  # Redirigir después de iniciar sesión
 LOGOUT_REDIRECT_URL = '/'  # Redirigir después de cerrar sesión
+
+#Cors allow header all
+CORS_ORIGIN_ALLOW_ALL=True
