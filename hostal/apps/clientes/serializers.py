@@ -6,4 +6,4 @@ class ClienteSerializer(serializers.ModelSerializer):
         model = Cliente
         fields = '__all__'
         
-    fecha_registro = serializers.DateTimeField(format=f"%d-%m-%Y %H:%M:%S")
+"""     fecha_registro = serializers.DateTimeField(format=f"%d-%m-%Y %H:%M:%S") """

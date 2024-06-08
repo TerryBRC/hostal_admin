@@ -32,5 +32,5 @@ class Factura(models.Model):
         db_table = 'factura'
 
     def __str__(self):
-        return self.reserva
+        return f"{self.reserva} - {self.fecha_emision} - {self.monto_total} - {self.detalle_servicios} - {self.tipo_cobro}"
     
